@@ -94,7 +94,7 @@ namespace NilaiTambahUTS
         {
             if (tbNAMA.Text == "")
             {
-                epWarning.SetError(tbNAMA, "Textbox Hobi1 tidak boleh kosong");
+                epWarning.SetError(tbNAMA, "Textbox Nama tidak boleh kosong");
                 epWrong.SetError(tbNAMA, "");
                 epCorrect.SetError(tbNAMA, "");
             }
