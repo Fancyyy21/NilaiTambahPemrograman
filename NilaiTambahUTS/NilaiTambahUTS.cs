@@ -138,25 +138,29 @@ namespace NilaiTambahUTS
                 }
             }
 
-            if (tbNIK.Text == "")
+        }
+
+        private void tbALAMAT_TextChanged(object sender, EventArgs e)
+        {
+            if (tbALAMAT.Text == "")
             {
-                epWarning.SetError(tbNIK, "Textbox NIK tidak boleh kosong");
-                epWrong.SetError(tbNIK, "");
-                epCorrect.SetError(tbNIK, "");
+                epWarning.SetError(tbALAMAT, "Textbox Alamat tidak boleh kosong");
+                epWrong.SetError(tbALAMAT, "");
+                epCorrect.SetError(tbALAMAT, "");
             }
             else
             {
-                if (tbNIK.Text.Length <= 15)
+                if (tbALAMAT.Text.Length <= 10)
                 {
-                    epWarning.SetError(tbNIK, "");
-                    epWrong.SetError(tbNIK, "");
-                    epCorrect.SetError(tbNIK, "Betul!");
+                    epWarning.SetError(tbALAMAT, "");
+                    epWrong.SetError(tbALAMAT, "");
+                    epCorrect.SetError(tbALAMAT, "Betul!");
                 }
                 else
                 {
-                    epWarning.SetError(tbNIK, "Tidak Boleh Lebih dari 15!");
-                    epWrong.SetError(tbNIK, "");
-                    epCorrect.SetError(tbNIK, "");
+                    epWarning.SetError(tbALAMAT, "Tidak Boleh Lebih dari 10!");
+                    epWrong.SetError(tbALAMAT, "");
+                    epCorrect.SetError(tbALAMAT, "");
                 }
             }
         }
@@ -395,7 +399,7 @@ namespace NilaiTambahUTS
 
                 if (MetodePembayaran == "")
                 {
-                    MessageBox.Show("Harus memilih salah satu dari pilihan Kurikulum", "Warning!",
+                    MessageBox.Show("Harus memilih salah satu dari pilihan MetodePembayaran", "Warning!",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 }
@@ -504,8 +508,6 @@ namespace NilaiTambahUTS
 
             this.Size = new Size(984, 243);
         }
-
-        
 
         
     }

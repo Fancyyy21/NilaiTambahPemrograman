@@ -120,6 +120,7 @@
             this.tbALAMAT.Name = "tbALAMAT";
             this.tbALAMAT.Size = new System.Drawing.Size(100, 20);
             this.tbALAMAT.TabIndex = 25;
+            this.tbALAMAT.TextChanged += new System.EventHandler(this.tbALAMAT_TextChanged);
             // 
             // tbNOHP
             // 
