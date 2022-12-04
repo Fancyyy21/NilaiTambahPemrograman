@@ -135,6 +135,7 @@
             this.tbNAMA.Name = "tbNAMA";
             this.tbNAMA.Size = new System.Drawing.Size(100, 20);
             this.tbNAMA.TabIndex = 23;
+            this.tbNAMA.TextChanged += new System.EventHandler(this.tbNAMA_TextChanged);
             // 
             // label6
             // 
@@ -363,9 +364,9 @@
             this.label9.Location = new System.Drawing.Point(214, 463);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(225, 44);
+            this.label9.Size = new System.Drawing.Size(285, 44);
             this.label9.TabIndex = 52;
-            this.label9.Text = "FORM DATA RESERVASI";
+            this.label9.Text = "FORM DATA PEMBAYARAN";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SUBMIT
@@ -542,10 +543,11 @@
             this.PILIHMETODE.Size = new System.Drawing.Size(0, 13);
             this.PILIHMETODE.TabIndex = 52;
             // 
-            // Form1
+            // NilaiTambahUTS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(198)))), ((int)(((byte)(184)))));
             this.ClientSize = new System.Drawing.Size(986, 765);
             this.Controls.Add(this.MetodePembayaran);
             this.Controls.Add(this.Pembayaran);
@@ -582,7 +584,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Form1";
+            this.Name = "NilaiTambahUTS";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.epWarning)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.epWrong)).EndInit();

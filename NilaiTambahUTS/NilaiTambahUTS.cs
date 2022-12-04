@@ -36,7 +36,7 @@ namespace NilaiTambahUTS
                                 {
                                     MessageBox.Show
                                    ("LENGKAP!!",
-                                   "Informasi Data Submit",
+                                   "Informasi Data Diri",
                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                     this.Size = new Size(1004, 515);
@@ -89,6 +89,31 @@ namespace NilaiTambahUTS
                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void tbNAMA_TextChanged(object sender, EventArgs e)
+        {
+            if (tbNAMA.Text == "")
+            {
+                epWarning.SetError(tbNAMA, "Textbox Hobi1 tidak boleh kosong");
+                epWrong.SetError(tbNAMA, "");
+                epCorrect.SetError(tbNAMA, "");
+            }
+            else
+            {
+                if ((tbNAMA.Text).All(Char.IsUpper))
+                {
+                    epWarning.SetError(tbNAMA, "");
+                    epWrong.SetError(tbNAMA, "");
+                    epCorrect.SetError(tbNAMA, "Betul!");
+                }
+                else
+                {
+                    epWarning.SetError(tbNAMA, "INPUTAN HANYA BOLEH HURUF KAPITAL!");
+                    epWrong.SetError(tbNAMA, "");
+                    epCorrect.SetError(tbNAMA, "");
+                }
+            }
+        }
         private void tbNIK_TextChanged(object sender, EventArgs e)
         {
             if (tbNIK.Text == "")
@@ -110,6 +135,28 @@ namespace NilaiTambahUTS
                     epCorrect.SetError(tbNIK, "");
                     epWarning.SetError(tbNIK, "");
                     epWrong.SetError(tbNIK, "Inputan hanya boleh angka!");
+                }
+            }
+
+            if (tbNIK.Text == "")
+            {
+                epWarning.SetError(tbNIK, "Textbox Words2 tidak boleh kosong");
+                epWrong.SetError(tbNIK, "");
+                epCorrect.SetError(tbNIK, "");
+            }
+            else
+            {
+                if (tbNIK.Text.Length <= 15)
+                {
+                    epWarning.SetError(tbNIK, "");
+                    epWrong.SetError(tbNIK, "");
+                    epCorrect.SetError(tbNIK, "Betul!");
+                }
+                else
+                {
+                    epWarning.SetError(tbNIK, "Tidak Boleh Lebih dari 15!");
+                    epWrong.SetError(tbNIK, "");
+                    epCorrect.SetError(tbNIK, "");
                 }
             }
         }
@@ -177,7 +224,7 @@ namespace NilaiTambahUTS
                             {
                                 MessageBox.Show
                                   ("LENGKAP!!",
-                                  "Informasi Data Submit",
+                                  "Informasi Data Reservasi",
                                   MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                 this.Size = new Size(1014, 771);
@@ -274,6 +321,7 @@ namespace NilaiTambahUTS
                 }
             }
         }
+
         private void Tunai_CheckedChanged_2(object sender, EventArgs e)
         {
             if (Tunai.Checked)
@@ -395,7 +443,7 @@ namespace NilaiTambahUTS
 
                 {
                     MessageBox.Show
-                            ("NIM : " + tbNIK.Text +
+                            ("NIK : " + tbNIK.Text +
                             "\nNama : " + tbNAMA.Text +
                             "\nJenis Kelamin : " + jk +
                             "\nAlamat : " + tbALAMAT.Text +
@@ -404,13 +452,13 @@ namespace NilaiTambahUTS
                             "\n------------------------------------------------" +
                             "\nCheckin: " + tbCHECKIN.Text +
                             "\nCheckout: " + tbCHECKOUT.Text +
-                            "\nTipe Kamar : " + comboBox1.Text +
+                            "\nTipe Kamar: " + comboBox1.Text +
                             "\nJumlah Kamar: " + tbJUMLAHKAMAR.Text +
                             "\nJumlah Tamu: " + tbJUMLAHTAMU.Text +
 
                             "\n------------------------------------------------" +
                             "\nTotal Pembayaran: " + tbPembayaran.Text +
-                            "\nMetodePembayaran: " + MetodePembayaran +
+                            "\nMetode Pembayaran: " + MetodePembayaran +
                             "\nPembayaran: " + Pembayaran,
                             
 
@@ -456,6 +504,8 @@ namespace NilaiTambahUTS
 
             this.Size = new Size(984, 243);
         }
+
+        
 
         
     }
