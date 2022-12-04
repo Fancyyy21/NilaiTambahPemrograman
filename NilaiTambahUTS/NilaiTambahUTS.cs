@@ -140,7 +140,7 @@ namespace NilaiTambahUTS
 
             if (tbNIK.Text == "")
             {
-                epWarning.SetError(tbNIK, "Textbox Words2 tidak boleh kosong");
+                epWarning.SetError(tbNIK, "Textbox NIK tidak boleh kosong");
                 epWrong.SetError(tbNIK, "");
                 epCorrect.SetError(tbNIK, "");
             }
